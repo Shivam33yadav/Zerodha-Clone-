@@ -1,0 +1,132 @@
+.container {
+  --radius: 4px;
+  width: 40%;
+  height: 63%;
+  background: rgb(245, 245, 245);
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  cursor: move;
+  box-sizing: border-box;
+  z-index: 100;
+  border-radius: var(--radius);
+  border: 1px solid rgb(238, 238, 238);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.dragging {
+  opacity: 0;
+}
+
+.container .header {
+  width: 100%;
+  background: #4184f3; /* Blue background for Buy actions */
+  box-sizing: border-box;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+/* --- Expanded Styling to support a functional Zerodha Order Window --- */
+
+.container .header .title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.container .header .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.container .header .close-btn:hover {
+  opacity: 1;
+}
+
+/* Inputs and Forms Area */
+.container .inputs {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  background: #ffffff;
+}
+
+.container .input-group {
+  display: flex;
+  gap: 15px;
+}
+
+.container .fieldset {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.container .fieldset label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.container .fieldset input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.container .fieldset input:focus {
+  border-color: #4184f3;
+}
+
+/* Footer / Action Buttons */
+.container .buttons {
+  padding: 15px 20px;
+  background: #fbfbfb;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.container .btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.container .btn-buy {
+  background-color: #4184f3;
+  color: white;
+}
+
+.container .btn-buy:hover {
+  background-color: #357ae8;
+}
+
+.container .btn-cancel {
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.container .btn-cancel:hover {
+  background-color: #eee;
+  color: #333;
+}
